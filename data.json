@@ -1,0 +1,31 @@
+[
+  {
+    "name": "John Doe",
+    "age": 30,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "john.doe@example.com"
+      },
+      {
+        "type": "phone",
+        "value": "123-456-7890"
+      }
+    ]
+  },
+  {
+    "name": "John Doe",
+    "age": 30,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "john1.doe1@example.com"
+      },
+      {
+        "type": "phone",
+        "value": "1123-456-7890"
+      }
+    ],
+    "id": "fd6b6e8a4ed521af6fe114cd4a6f73b0"
+  }
+]

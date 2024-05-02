@@ -1,7 +1,7 @@
 ### GET Request: List all persons
 GET http://localhost:3000/api/persons
 
-### POST Request
+### POST Request: Create a new person
 POST http://localhost:3000/api/persons
 Content-Type: application/json
 
@@ -11,11 +11,45 @@ Content-Type: application/json
     "contacts": [
         {
             "type": "email",
-            "value": "john.doe@example.com"
+            "value": "john1.doe1@example.com"
         },
         {
             "type": "phone",
-            "value": "123-456-7890"
+            "value": "1123-456-7890"
         }
     ]
-}   
+}
+
+### GET Request: Get details of a specific person by ID
+GET http://localhost:3000/api/persons/fd6b6e8a4ed521af6fe114cd4a6f73b0
+
+### PUT Request: Update details of a specific person by ID
+PUT http://localhost:3000/api/persons/5d8cfa76bd0a082c71585406fbfdcbe9
+Content-Type: application/json
+
+{
+    "name": "Updated Name",
+    "age": 35,
+    "contacts": [
+        {
+            "type": "email",
+            "value": "updated.email@example.com"
+        },
+        {
+            "type": "phone",
+            "value": "987-654-3210"
+        }
+    ]
+}
+
+### POST Request: Add a contact to a specific person by ID
+POST http://localhost:3000/api/persons/5d8cfa76bd0a082c71585406fbfdcbe9/contacts
+Content-Type: application/json
+
+{
+    "type": "address",
+    "value": "123 Main Street, City, Country"
+}
+
+### DELETE Request: Remove a specific person by ID
+DELETE http://localhost:3000/api/persons/5d8cfa76bd0a082c71585406fbfdcbe9
